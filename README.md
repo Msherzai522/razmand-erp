@@ -1,237 +1,217 @@
-# 🏭 سیستم مدیریت شرکت رازمند - Razmand ERP
+# Razmand-ERP — AI-enabled ERP for Plastic Water-Storage Manufacturing
 
-> **A comprehensive Persian RTL Enterprise Resource Planning system for plastic water-tank manufacturing**
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5+-blue.svg)](https://www.typescriptlang.org/)
-[![Supabase](https://img.shields.io/badge/Supabase-Database-green.svg)](https://supabase.io/)
-[![Tailwind](https://img.shields.io/badge/Tailwind-CSS-blue.svg)](https://tailwindcss.com/)
-
-## 📋 فهرست مطالب - Table of Contents
-
-- [نمای کلی سیستم - System Overview](#-نمای-کلی-سیستم---system-overview)
-- [ویژگی‌ها - Features](#-ویژگیها---features)
-- [معماری سیستم - Architecture](#-معماری-سیستم---architecture)
-- [نصب و راه‌اندازی - Installation](#-نصب-و-راهاندازی---installation)
-- [استفاده - Usage](#-استفاده---usage)
-- [مستندات - Documentation](#-مستندات---documentation)
-- [مشارکت - Contributing](#-مشارکت---contributing)
-
-## 🎯 نمای کلی سیستم - System Overview
-
-سیستم مدیریت شرکت رازمند یک ERP جامع و کامل برای مدیریت شرکت‌های تولیدی مصنوعات پلاستیکی است. این سیستم تمامی فرآیندهای کسب‌وکار از خرید مواد اولیه تا فروش محصولات نهایی را پوشش می‌دهد.
-
-**Razmand ERP** is a complete enterprise resource planning system designed specifically for plastic water-tank manufacturing companies. It covers all business processes from raw material procurement to final product sales.
-
-## ✨ ویژگی‌ها - Features
-
-### 📦 مدیریت انبار - Warehouse Management
-- ✅ خرید و ثبت مواد خام - Raw material procurement
-- ✅ مدیریت موجودی انبار - Inventory management
-- ✅ سند خروج مواد خام - Material issue tracking
-- ✅ ردیابی کامل مواد - Complete material traceability
-
-### 🏭 مدیریت تولید - Production Management
-- ✅ بخش اکسترودر - Extruder operations (گرانول production)
-- ✅ بخش آسیاب - Mill operations (پودر production)
-- ✅ تولید مخازن آب - Water tank manufacturing
-- ✅ کنترل کیفیت - Quality control
-- ✅ ردیابی تولید - Production tracking
-
-### 💰 فروش و مالی - Sales & Finance
-- ✅ فروش نقدی و اعتباری - Cash and credit sales
-- ✅ مدیریت مطالبات - Receivables management
-- ✅ مدیریت صندوق و بانک - Cash and bank management
-- ✅ گزارشات مالی - Financial reporting
-- ✅ گزارش سود و زیان - P&L statements
-
-### 👥 منابع انسانی - Human Resources
-- ✅ مدیریت کارکنان - Employee management
-- ✅ حضور و غیاب - Attendance tracking
-- ✅ محاسبه حقوق - Payroll calculations
-
-### 📊 گزارشات - Reports
-- ✅ گزارشات تولید - Production reports
-- ✅ گزارشات موجودی - Inventory reports
-- ✅ گزارشات فروش - Sales reports
-- ✅ گزارشات مالی - Financial reports
-- ✅ داشبورد مدیریتی - Executive dashboard
-
-### 🔐 امنیت و دسترسی - Security & Access
-- ✅ احراز هویت کامل - Complete authentication
-- ✅ کنترل دسترسی مبتنی بر نقش - Role-based access control
-- ✅ امنیت سطح ردیف - Row-level security (RLS)
-- ✅ مدیریت کاربران - User management
-
-### 🌐 ویژگی‌های فنی - Technical Features
-- ✅ پشتیبانی کامل از RTL - Full RTL support
-- ✅ تقویم جلالی - Solar Hijri (Jalali) calendar
-- ✅ واحد پول افغانی - Afghan Afghani currency
-- ✅ فونت Vazirmatn - Persian typography
-- ✅ رابط کاربری ریسپانسیو - Responsive UI
-- ✅ پشتیبانی از دستگاه‌های موبایل - Mobile support
-
-## 🏗️ معماری سیستم - Architecture
-
-```mermaid
-graph TD
-    A[React + TypeScript Frontend] --> B[Supabase Backend]
-    B --> C[PostgreSQL Database]
-    B --> D[Authentication & RLS]
-    A --> E[Tailwind CSS + Shadcn UI]
-    A --> F[TanStack Query]
-    C --> G[Business Logic Triggers]
-    C --> H[Automated Stock Management]
-```
-
-### تکنولوژی‌های استفاده شده - Technology Stack
-
-**Frontend:**
-- ⚛️ React 18+ with TypeScript
-- 🎨 Tailwind CSS + Shadcn/ui components
-- 📊 TanStack Query for state management
-- 🗓️ Dayjs + Jalaliday for date handling
-- 📈 Recharts for data visualization
-- 🔗 React Router for navigation
-
-**Backend:**
-- 🚀 Supabase (Backend-as-a-Service)
-- 🐘 PostgreSQL with advanced features
-- 🔒 Row Level Security (RLS)
-- 🔄 Real-time subscriptions
-- 📁 File storage
-
-**DevOps:**
-- 📦 Vite for build tooling
-- 🧪 Vitest for testing
-- 📋 ESLint + Prettier for code quality
-- 🔧 GitHub Actions for CI/CD
-
-## 🚀 نصب و راه‌اندازی - Installation
-
-### پیش‌نیازها - Prerequisites
-
-```bash
-node >= 18.0.0
-npm >= 8.0.0
-# یا - or
-yarn >= 1.22.0
-```
-
-### مراحل نصب - Installation Steps
-
-1. **کلون کردن پروژه - Clone the repository:**
-```bash
-git clone https://github.com/Msherzai522/razmand-erp.git
-cd razmand-erp
-```
-
-2. **نصب وابستگی‌ها - Install dependencies:**
-```bash
-npm install
-# یا - or
-yarn install
-```
-
-3. **تنظیم متغیرهای محیطی - Environment setup:**
-```bash
-cp .env.example .env.local
-# ویرایش فایل .env.local و تنظیم متغیرهای Supabase
-# Edit .env.local and configure Supabase variables
-```
-
-4. **راه‌اندازی پایگاه داده - Database setup:**
-```bash
-# اجرای migration ها
-# Run migrations
-npm run db:migrate
-
-# اضافه کردن داده‌های نمونه (اختیاری)
-# Seed sample data (optional)
-npm run db:seed
-```
-
-5. **اجرای پروژه - Run the project:**
-```bash
-npm run dev
-# یا - or
-yarn dev
-```
-
-6. **دسترسی به سیستم - Access the system:**
-```
-http://localhost:5173
-```
-
-## 📖 استفاده - Usage
-
-### ورود به سیستم - Login
-
-1. اولین کاربر به‌صورت خودکار ادمین می‌شود
-2. کاربران بعدی باید توسط ادمین دعوت شوند
-3. نقش‌های مختلف: `admin`, `warehouse`, `production`, `sales`, `accountant`, `hr`, `viewer`
-
-*First registered user automatically becomes admin. Other users must be invited by admin with specific roles.*
-
-### گردش کار اصلی - Main Workflow
-
-```mermaid
-flowchart LR
-    A[خرید مواد خام] --> B[انبار مواد خام]
-    B --> C[اکسترودر - تولید گرانول]
-    C --> D[آسیاب - تولید پودر]
-    D --> E[تولید مخازن]
-    E --> F[انبار محصولات]
-    F --> G[فروش]
-    G --> H[دریافت مطالبات]
-```
-
-## 📚 مستندات - Documentation
-
-- [📋 راهنمای نصب کامل](./docs/installation.md) - Complete Installation Guide
-- [🏗️ معماری سیستم](./docs/architecture.md) - System Architecture
-- [💾 مستندات پایگاه داده](./docs/database.md) - Database Documentation
-- [🔌 مستندات API](./docs/api.md) - API Documentation
-- [👨‍💻 راهنمای توسعه‌دهندگان](./docs/development.md) - Development Guide
-- [🔐 مدیریت امنیت](./docs/security.md) - Security Management
-- [📊 راهنمای گزارشات](./docs/reports.md) - Reports Guide
-- [🎨 راهنمای طراحی UI](./docs/ui-guidelines.md) - UI Design Guidelines
-
-## 🤝 مشارکت - Contributing
-
-1. **Fork کردن پروژه**
-2. **ایجاد branch جدید**: `git checkout -b feature/amazing-feature`
-3. **Commit کردن تغییرات**: `git commit -m 'Add amazing feature'`
-4. **Push کردن branch**: `git push origin feature/amazing-feature`
-5. **ایجاد Pull Request**
-
-### استانداردهای کد - Code Standards
-- استفاده از TypeScript برای type safety
-- پیروی از ESLint و Prettier rules
-- نوشتن tests برای کامپوننت‌های جدید
-- مستندسازی کامل
-
-## 📄 مجوز - License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👥 تیم توسعه - Development Team
-
-**ASQA Group** - Digital Transformation Specialists
-- 🌍 Location: Kabul, Afghanistan
-- 📧 Contact: [asqa-groups@github.com](mailto:asqa-groups@github.com)
-- 🔗 GitHub: [@Msherzai522](https://github.com/Msherzai522)
-
-## 🙏 تشکر - Acknowledgments
-
-- Thanks to the Supabase team for the excellent BaaS platform
-- React and TypeScript communities
-- Tailwind CSS and Shadcn/ui for beautiful components
-- Persian/Farsi web development community
+This repository contains an ERP system design and implementation plan focused on a plastic water-storage products factory (Razmand). The README documents the system overview, AI-enabled features, architecture, MVP roadmap, deliverables, acceptance criteria, security and compliance notes, and contribution guidance.
 
 ---
 
-**Made with ❤️ in Afghanistan 🇦🇫**
+## Table of Contents
 
-*"Empowering Afghan businesses through digital transformation"*
+- Project overview
+- Goals
+- Core workflow (AI-enabled)
+- Supporting systems (Accounting, Factory Management, Reports)
+- Cross-cutting AI & infra concerns
+- High-level architecture
+- MVP roadmap & phases
+- Deliverables (epics / issues)
+- Acceptance criteria & KPIs
+- Security, compliance & ethics
+- Quick start / setup notes
+- Contributing
+- License
+
+---
+
+## Project overview
+
+Razmand-ERP is an enterprise resource planning system tailored for a plastics factory producing water-storage tanks. This README presents a design for an AI-enabled ERP that automates procurement, production, quality control, warehousing, sales (cash and credit), and collections — while integrating accounting and reporting.
+
+The system maps the factory's operational flow and upgrades each stage with pragmatic AI features to improve throughput, reduce waste, and automate repetitive tasks.
+
+## Goals
+
+- Streamline end-to-end factory operations from procurement to collections.
+- Use AI/ML to automate and optimize decisions: demand forecasting, inline quality, predictive maintenance, credit scoring, and prioritized collections.
+- Provide explainable and auditable AI features suitable for operational use.
+- Deliver an MVP that can be iteratively improved with human-in-the-loop feedback and MLOps practices.
+
+## Core workflow (AI-enabled)
+
+Each numbered step below corresponds to a module in the system, its AI enhancements, required data, components, and acceptance criteria.
+
+1) Purchase raw materials
+- AI features: supplier scoring, PO suggestions (demand forecasting + lead-time optimization), invoice OCR & auto-match
+- Data: supplier history, POs, invoices, inventory levels
+- Acceptance: OCR extracts >95% of key fields; PO suggestions with ranking and confidence; PO match rate >80% automated
+
+2) Raw materials warehouse
+- AI features: inventory classification, anomaly detection for shrinkage, mobile image inspections
+- Data: receipts, barcode/RFID scans, images
+- Acceptance: suspicious receipts flagged and reviewed; image QC accuracy >85%
+
+3) Extruder (granules production)
+- AI features: process-parameter optimization, real-time quality prediction
+- Data: telemetry, lab QC
+- Acceptance: predictions correlate with lab (R² >0.7); reduced off-spec rate vs baseline
+
+4) Mill / Grinder
+- AI features: throughput optimization, predictive maintenance, powder QC
+- Data: vibration/temperature, production logs
+- Acceptance: maintenance alerts with >72h lead time and >80% precision
+
+5) Powder warehouse
+- AI features: shelf-life prediction, routing optimization, fraud/theft detection
+- Data: inventory moves, consumption logs
+- Acceptance: reduced expired/obsolete stock vs baseline
+
+6) Deliver powder to production
+- AI features: smart picklists, batch matching, recipe optimization
+- Data: production schedules, inventory
+- Acceptance: reduced fulfillment time and fewer production delays
+
+7) Produce water-storage tanks
+- AI features: adaptive recipes, inline CV quality control, yield optimization
+- Data: production telemetry, camera images, QC outcomes
+- Acceptance: inline defect detection reduces scrap and catches defects in real time
+
+8) Finished goods warehouse
+- AI features: SKU classification, demand-aware stocking, packaging/label verification
+- Data: finished goods records, sales forecasts
+- Acceptance: stockouts reduced; packaging verification accuracy >95%
+
+9) Cash sales (POS)
+- AI features: POS fraud detection, dynamic pricing suggestions, instant reconciliation
+- Data: transactions, customer records
+- Acceptance: suspicious transactions flagged with low false positives; automated reconciliation rate target
+
+10) Credit / installment sales
+- AI features: credit scoring, dynamic payment plans, automated contract generation
+- Data: customer history, payments
+- Acceptance: credit decisions with explainability and user override; model latency suitable for UX
+
+11) Collections / receivables
+- AI features: prioritized collections queue, predicted recovery probabilities, automated reminders (email/SMS/chatbot)
+- Data: AR ledger, contact history
+- Acceptance: improved recovery rates and lower DSO
+
+## Supporting systems (right column)
+
+- Accounting
+  - Modules: receipts, payments, cash management, bank transaction sync
+  - AI: auto-categorization, automated reconciliation, anomaly detection
+
+- Factory management
+  - Modules: expense tracking, HR/attendance, system settings
+  - AI: shift scheduling, predictive absenteeism, energy forecasting
+
+- Reports
+  - Examples: procurement, extruder/mill, production, inventory, sales, P&L
+  - AI: natural-language summaries, automated insights, KPI drift alerts
+
+## Cross-cutting AI & operational concerns
+
+- Human-in-the-loop retraining and feedback collection for models
+- Model explainability (decision reason logging) and full audit trails
+- MLOps: CI/CD for models, model registry, canary/blue-green rollouts
+- Data governance: PII masking, role-based access, data lineage
+- Observability: data quality metrics, model drift detection, SLOs/SLIs
+- Edge/on-prem inference for low-latency factory needs
+
+## High-level architecture
+
+- Data ingestion: IoT gateway, POS, invoice OCR, batch ETL
+- Storage: raw data lake (S3/MinIO), data warehouse, time-series DB (InfluxDB/ClickHouse), feature store
+- ML platform: training pipelines (Kubeflow/Airflow), model registry (MLflow), notebooks
+- Serving: inference APIs, edge containers (k8s/containers) for PLCs
+- Integration: REST/gRPC APIs, message bus (Kafka), webhooks
+- UI: React/Next.js dashboards, mobile apps
+- Security & ops: OAuth2/SSO, RBAC, audit logs, backups, monitoring (Prometheus/Grafana)
+
+Suggested tech examples: PostgreSQL, MinIO, ClickHouse/InfluxDB, Kafka, Kubeflow, MLflow, FastAPI, React, Redis
+
+## MVP roadmap & phases
+
+- Phase 0: Discovery & foundation
+  - Data model for inventory, production, sales
+  - Basic ingestion (PO, receipts, production logs)
+  - Minimal UI for procurement, inventory, production, sales
+  - Monitoring, backups, authentication
+
+- Phase 1: MVP AI features
+  - OCR invoice ingestion + PO auto-match
+  - Demand forecasting for PO suggestions
+  - Inventory alerts & smart picklists
+  - Inventory / purchases / sales reports
+
+- Phase 2: Production ML pilots
+  - Inline quality prediction for extruder/mill (pilot)
+  - Predictive maintenance for mill
+  - Credit scoring + installment automation
+
+- Phase 3: Scale & automation
+  - Full MLOps, multi-line CV QA, dynamic pricing, automated collections
+  - Edge deployments and PLC integration
+
+## Deliverables (epics & example issues)
+
+- Epic: Foundation — data ingestion & inventory model
+  - Story: Define raw material schema
+  - Story: Implement PO ingestion
+  - Story: Build inventory APIs & UI
+
+- Epic: OCR pipeline & invoice matching
+  - Issue: Build OCR pipeline for invoices
+  - Issue: Auto-match invoices to POs with confidence scores
+
+- Epic: Demand forecasting & PO suggestions
+  - Issue: Train baseline forecasting model (MAPE target)
+  - Issue: UI for suggested POs and overrides
+
+- Epic: Inline quality pilot
+  - Issue: Edge camera setup + CV pipeline
+  - Issue: Integrate predictions into MES dashboards
+
+## Acceptance criteria & KPIs
+
+- OCR key-field extraction accuracy >95%
+- PO suggestion accuracy and acceptance rate (target configurable)
+- Inventory discrepancy anomaly detection precision >80%
+- Predictive maintenance alerts with >72h lead and >80% precision
+- Inline QC detection accuracy correlates with lab results (R² >0.7)
+- Automated reconciliation coverage target (e.g., >70%)
+
+## Security, compliance & ethics
+
+- Log decisions that affect customer credit or automated collections; include human override paths
+- Enforce RBAC for model outputs and PII
+- Implement data retention and deletion policies for customer data
+- Ensure transparent explainability for high-risk models (credit, collections)
+
+## Quick start / setup notes (developer)
+
+- Clone repository
+- Set up environment variables (DB, object storage, message bus)
+- Start core services (Postgres, MinIO, Kafka) using docker-compose or k8s
+- Run initial migrations and seed data for inventory and sample POs
+- Start backend API server and frontend locally
+
+(Exact repo scripts and templates TBD — see Issues created for setup automation)
+
+## Contributing
+
+- Create issues for new features or bugs
+- Follow the branch naming convention: feature/<short-desc>, fix/<short-desc>
+- Submit PRs with tests and documentation
+- Reviews: 1 reviewer required for documentation changes, 2 for core services
+
+## License
+
+- TBD — add license file (e.g., MIT) and update CONTRIBUTORS guidance
+
+---
+
+If you want, I can now:
+- Create GitHub issues for the top 5 Phase 1 MVP items.
+- Create an initial project board / milestones.
+- Add CI/CD templates and docker-compose for Phase 0 setup.
+
